@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#7bc043">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>농부 키우기</title>
+<link rel="icon" href="assets/farmer.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="hud-top">
+      <div class="lv">
+        <span id="lvText">Lv.1</span>
+        <div class="xpbar"><i id="xpFill"></i></div>
+      </div>
+      <div class="hud-btns">
+        <button id="btnSound" class="icon-btn" aria-label="소리">🔊</button>
+        <button id="btnMenu" class="icon-btn" aria-label="메뉴">⚙️</button>
+      </div>
+    </div>
+    <div class="coins"><span class="coin-ico">🪙</span><b id="coins">0</b></div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <main id="stage">
+    <div class="farmer-area">
+      <div class="farmer-wrap" id="farmerWrap">
+        <canvas id="farmer" width="80" height="92"></canvas>
+        <span class="spark s1">✨</span><span class="spark s2">✨</span><span class="spark s3">⭐</span>
+      </div>
+      <div class="farmer-caption">
+        <b id="stageName">새내기 농부</b>
+        <small id="stageNext"></small>
+      </div>
+    </div>
+    <div id="field">
+      <div id="plots"></div>
+    </div>
+    <div id="boostBadge" class="hidden">⚡ 2배 속도 <b id="boostTime">0:00</b></div>
+  </main>
+
+  <section id="panel">
+    <button id="adBtn" class="ad-btn">📺 광고 보고 <b>2배 빠르게</b> 키우기 <small>(+2분)</small></button>
+    <div id="upgrades"></div>
+  </section>
+
+  <div id="toast" class="hidden"></div>
+  <div id="modal" class="hidden"><div class="modal-box" id="modalBox"></div></div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
